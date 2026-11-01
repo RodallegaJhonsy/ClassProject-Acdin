@@ -1,0 +1,56 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- PLACEHOLDER illustration: replace with a real image and update coordinates in games.json -->
+  <rect width="400" height="300" fill="#f4ecdf"/>
+  <rect y="0" width="400" height="12" fill="#1b2d63"/>
+  <rect y="230" width="400" height="70" fill="#c9a77a"/>
+  <ellipse cx="210" cy="262" rx="150" ry="22" fill="#26407f" opacity="0.85"/>
+  <ellipse cx="210" cy="262" rx="130" ry="16" fill="none" stroke="#d4b36a" stroke-width="2"/>
+  <!-- window -->
+  <rect x="40" y="30" width="100" height="110" fill="#bfe3f5" stroke="#8a6a3e" stroke-width="5"/>
+  
+  <line x1="90" y1="30" x2="90" y2="140" stroke="#8a6a3e" stroke-width="4"/>
+  <line x1="40" y1="85" x2="140" y2="85" stroke="#8a6a3e" stroke-width="4"/>
+  <path d="M30 26 h20 v120 q-10 -50 -20 -120z" fill="#7a1f3d"/>
+  <path d="M150 26 h-20 v120 q10 -50 20 -120z" fill="#7a1f3d"/>
+  <!-- clock -->
+  <circle cx="220" cy="60" r="27" fill="#d4b36a"/>
+  <circle cx="220" cy="60" r="22" fill="#fffaf0" stroke="#8a6a3e" stroke-width="2"/>
+  <line x1="220" y1="60" x2="211" y2="71" stroke="#12204a" stroke-width="3" stroke-linecap="round"/><line x1="220" y1="60" x2="220" y2="42" stroke="#12204a" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="220" cy="60" r="2.5" fill="#12204a"/>
+  <!-- bookshelf -->
+  <rect x="296" y="60" width="92" height="160" fill="#8a6a3e"/>
+  <rect x="300" y="64" width="84" height="48" fill="#5e4527"/>
+  <rect x="300" y="116" width="84" height="48" fill="#5e4527"/>
+  <rect x="300" y="168" width="84" height="48" fill="#5e4527"/>
+  <rect x="302" y="72" width="10" height="40" fill="#1b2d63"/>
+  <rect x="313" y="76" width="10" height="36" fill="#b8964a"/>
+  <rect x="324" y="70" width="10" height="42" fill="#7a1f3d"/>
+  <rect x="335" y="74" width="9" height="38" fill="#2f6b4f"/>
+  
+  <rect x="356" y="72" width="10" height="40" fill="#b8964a"/>
+  <rect x="367" y="78" width="10" height="34" fill="#1b2d63"/>
+  <rect x="304" y="126" width="12" height="38" fill="#7a1f3d"/>
+  <rect x="318" y="130" width="12" height="34" fill="#1b2d63"/>
+  <rect x="345" y="140" width="30" height="24" fill="#e8dac2"/>
+  <circle cx="320" cy="200" r="13" fill="#d4b36a"/>
+  <rect x="345" y="178" width="12" height="38" fill="#2f6b4f"/>
+  <rect x="359" y="182" width="12" height="34" fill="#b8964a"/>
+  <!-- lamp -->
+  <rect x="58" y="160" width="4" height="70" fill="#5e4527"/>
+  <path d="M42 160 L78 160 L70 135 L50 135 Z" fill="#e6cf8f"/>
+  <ellipse cx="60" cy="230" rx="16" ry="4" fill="#5e4527"/>
+  <!-- table -->
+  <rect x="120" y="190" width="180" height="10" rx="3" fill="#5e4527"/>
+  <rect x="132" y="200" width="8" height="38" fill="#5e4527"/>
+  <rect x="280" y="200" width="8" height="38" fill="#5e4527"/>
+  <!-- vase + roses -->
+  <path d="M154 190 Q148 168 158 152 L172 152 Q182 168 176 190 Z" fill="#26407f"/>
+  <rect x="156" y="148" width="18" height="6" rx="2" fill="#d4b36a"/>
+  <path d="M165 150 L158 136 M165 150 L172 136 M165 150 L165 126" stroke="#2f6b4f" stroke-width="2.5"/>
+  <circle cx="158" cy="134" r="7" fill="#3b82c4"/><circle cx="172" cy="134" r="7" fill="#3b82c4"/><circle cx="165" cy="124" r="7" fill="#3b82c4"/>
+  <!-- teacup -->
+  <ellipse cx="250" cy="189" rx="20" ry="4" fill="#e8dac2" stroke="#8a6a3e" stroke-width="1"/>
+  <path d="M238 166 h24 v10 q0 12 -12 12 q-12 0 -12 -12 z" fill="#d4b36a" stroke="#8a6a3e" stroke-width="1.5"/><rect x="238" y="170" width="24" height="3" fill="#26407f"/>
+  <path d="M262 172 q10 0 10 7 q0 7 -10 7" fill="none" stroke="#8a6a3e" stroke-width="2.5"/>
+  <path d="M244 162 q4 -6 0 -12 M252 162 q4 -6 0 -12" stroke="#8a6a3e" stroke-width="1.5" fill="none" opacity="0.6"/>
+</svg>

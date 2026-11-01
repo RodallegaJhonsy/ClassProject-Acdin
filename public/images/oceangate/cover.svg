@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- PLACEHOLDER cover: replace with a real, licensed image (same path) -->
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a5b85"/>
+      <stop offset="0.55" stop-color="#06223b"/>
+      <stop offset="1" stop-color="#02060d"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#sea)"/>
+  <g fill="#ffffff" opacity="0.07">
+    <path d="M60 0 L95 0 L170 300 L110 300 Z"/>
+    <path d="M170 0 L200 0 L250 300 L200 300 Z"/>
+    <path d="M280 0 L320 0 L360 300 L300 300 Z"/>
+  </g>
+  <g fill="none" stroke="#67e8f9" opacity="0.5">
+    <circle cx="80" cy="200" r="4"/><circle cx="90" cy="170" r="2.5"/><circle cx="74" cy="140" r="3"/>
+    <circle cx="310" cy="220" r="3.5"/><circle cx="320" cy="185" r="2"/><circle cx="305" cy="150" r="3"/>
+  </g>
+  <!-- depth gauge -->
+  <g stroke="#67e8f9" stroke-width="1.5" opacity="0.7">
+    <line x1="370" y1="40" x2="370" y2="260"/>
+    <line x1="362" y1="40" x2="370" y2="40"/><line x1="362" y1="95" x2="370" y2="95"/>
+    <line x1="362" y1="150" x2="370" y2="150"/><line x1="362" y1="205" x2="370" y2="205"/>
+    <line x1="362" y1="260" x2="370" y2="260"/>
+  </g>
+  <path d="M0 280 Q60 262 120 278 T240 276 T400 272 V300 H0 Z" fill="#0b1a24"/>
+</svg>
+

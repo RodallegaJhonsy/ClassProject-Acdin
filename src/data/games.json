@@ -1,0 +1,367 @@
+{
+  "site": {
+    "title": "Stories Under Pressure",
+    "subtitle": "An interactive English class project",
+    "intro": "Explore two very different stories: the life of Princess Diana and the OceanGate Titan tragedy. Pick a section, choose a mini-game and test what you have learned.",
+    "navLabel": "Jump to section",
+    "footer": "School project for English class. Educational content only. Illustrations are placeholders and can be replaced with real, licensed images."
+  },
+  "ui": {
+    "backToMenu": "Back to menu",
+    "howToPlay": "How to play",
+    "start": "Start game",
+    "play": "Play",
+    "check": "Check",
+    "playAgain": "Play again",
+    "next": "Next question",
+    "seeResults": "See results",
+    "score": "Score",
+    "progress": "Progress",
+    "best": "Best",
+    "notPlayed": "Not played yet",
+    "correct": "Correct!",
+    "incorrect": "Not quite.",
+    "questionOf": "Question {current} of {total}",
+    "resultsTitle": "Results",
+    "yourScore": "Your score",
+    "resultExcellent": "Excellent work! You really know this topic.",
+    "resultGood": "Good job! You know quite a lot already.",
+    "resultTry": "Keep learning and try again. You can do it!",
+    "gamesLabel": "mini-games",
+    "timeline": {
+      "dragHint": "Drag the cards (or use the arrow buttons) to put the events in chronological order, from oldest to newest.",
+      "moveUp": "Move up",
+      "moveDown": "Move down",
+      "correctPosition": "Correct position",
+      "wrongPosition": "Should be #{position}",
+      "reviewTitle": "Review the events"
+    },
+    "differences": {
+      "found": "{found}/{total} found",
+      "misses": "Misses: {misses}",
+      "imageALabel": "Picture A",
+      "imageBLabel": "Picture B",
+      "giveUp": "Show answers",
+      "congrats": "Congratulations! You found all the differences!",
+      "partial": "You found {found} of {total} differences. The missing ones are now highlighted.",
+      "placeholderNote": "Placeholder illustration: replace the files in /public/images/diana/ with real images and update the coordinates in games.json."
+    },
+    "submarine": {
+      "depth": "Depth",
+      "time": "Time",
+      "goal": "Goal",
+      "startDive": "Start dive",
+      "crashed": "Collision!",
+      "crashedText": "Your submarine hit an obstacle. Take a breath and try again.",
+      "restart": "Restart dive",
+      "won": "Target depth reached!",
+      "wonText": "You reached {depth} m in {time} s.",
+      "bestTime": "Best time",
+      "up": "Up",
+      "down": "Down",
+      "left": "Left",
+      "right": "Right",
+      "disclaimer": "Fictional educational simulation, not a technical reproduction of the real Titan."
+    },
+    "detective": {
+      "selectHint": "Tap every card you think is a real red flag. Then press Check.",
+      "selected": "{count} selected",
+      "redFlag": "Red flag",
+      "notRedFlag": "Not a red flag",
+      "youWereRight": "Your answer was right",
+      "youWereWrong": "Your answer was wrong",
+      "youFlagged": "You flagged this",
+      "youDidNotFlag": "You did not flag this"
+    }
+  },
+  "princessDiana": {
+    "title": "Princess Diana",
+    "shortTitle": "Princess Diana",
+    "tagline": "The People's Princess (1961 – 1997)",
+    "intro": "Diana, Princess of Wales, became one of the most famous people in the world. She used her fame to support charities, fight the stigma around HIV/AIDS and campaign against landmines.",
+    "cover": "/images/diana/cover.svg",
+    "coverAlt": "Placeholder illustration of a royal crest with roses",
+    "games": {
+      "timeline": {
+        "title": "Order Her Story",
+        "description": "Put the key moments of Diana's life in the right order.",
+        "icon": "history",
+        "instructions": [
+          "You will see six events from Diana's life in random order.",
+          "Drag and drop the cards, or use the arrow buttons on mobile.",
+          "Press Check to see your score and learn about each event."
+        ],
+        "events": [
+          {
+            "id": "d1",
+            "label": "Diana Frances Spencer is born at Park House, Sandringham, England.",
+            "year": "1961",
+            "explanation": "Diana was born on 1 July 1961 into an aristocratic family. Her father later became the 8th Earl Spencer."
+          },
+          {
+            "id": "d2",
+            "label": "She marries Prince Charles at St Paul's Cathedral in London.",
+            "year": "1981",
+            "explanation": "The wedding took place on 29 July 1981 and was watched on TV by an estimated 750 million people around the world."
+          },
+          {
+            "id": "d3",
+            "label": "Her first son, Prince William, is born.",
+            "year": "1982",
+            "explanation": "Prince William was born on 21 June 1982. Her second son, Prince Harry, was born in 1984."
+          },
+          {
+            "id": "d4",
+            "label": "She shakes hands with an HIV/AIDS patient without wearing gloves.",
+            "year": "1987",
+            "explanation": "In April 1987, at London Middlesex Hospital, this simple gesture helped show the world that HIV is not spread by touch."
+          },
+          {
+            "id": "d5",
+            "label": "Diana and Charles officially divorce.",
+            "year": "1996",
+            "explanation": "The divorce was finalised on 28 August 1996. Diana kept the title Diana, Princess of Wales."
+          },
+          {
+            "id": "d6",
+            "label": "She walks through a minefield in Angola to raise awareness about landmines.",
+            "year": "1997",
+            "explanation": "In January 1997 she visited Huambo, Angola, with the HALO Trust. Her campaign helped build support for the international treaty banning landmines."
+          }
+        ]
+      },
+      "differences": {
+        "title": "Find the Differences",
+        "description": "Spot the five changes between two royal tea room pictures.",
+        "icon": "search",
+        "instructions": [
+          "Compare Picture A and Picture B carefully.",
+          "Click or tap on a difference in either picture.",
+          "Find all five differences to win. Wrong clicks count as misses."
+        ],
+        "imageA": "/images/diana/differences-a.svg",
+        "imageB": "/images/diana/differences-b.svg",
+        "imageAlt": "Placeholder illustration of a royal tea room with a window, a clock, a bookshelf and a table",
+        "aspectRatio": 1.3333,
+        "differences": [
+          { "id": "sun", "label": "The sun in the window", "x": 28.75, "y": 21.67, "radius": 8 },
+          { "id": "clock", "label": "The clock hands", "x": 55, "y": 20, "radius": 8 },
+          { "id": "book", "label": "A missing book", "x": 87.5, "y": 30, "radius": 7 },
+          { "id": "flowers", "label": "The color of the roses", "x": 41.25, "y": 44, "radius": 8 },
+          { "id": "cup", "label": "The color of the teacup", "x": 62.5, "y": 59, "radius": 7 }
+        ]
+      },
+      "quiz": {
+        "title": "How Much Do You Know About Diana?",
+        "description": "Ten questions about the life and work of the People's Princess.",
+        "icon": "help",
+        "instructions": [
+          "Answer ten multiple-choice questions.",
+          "Each question has four options and only one is correct.",
+          "You get instant feedback and a short explanation."
+        ],
+        "questions": [
+          {
+            "q": "In which year was Diana born?",
+            "options": ["1955", "1961", "1965", "1970"],
+            "correct": 1,
+            "explanation": "Diana was born on 1 July 1961 in Sandringham, Norfolk."
+          },
+          {
+            "q": "What was Diana's family name before she married?",
+            "options": ["Windsor", "Spencer", "Mountbatten", "Middleton"],
+            "correct": 1,
+            "explanation": "She was born Diana Frances Spencer, daughter of John Spencer, who became the 8th Earl Spencer."
+          },
+          {
+            "q": "Where did Diana and Prince Charles get married in 1981?",
+            "options": ["Westminster Abbey", "St Paul's Cathedral", "Windsor Castle", "Canterbury Cathedral"],
+            "correct": 1,
+            "explanation": "They married at St Paul's Cathedral in London on 29 July 1981."
+          },
+          {
+            "q": "What job did Diana have before her engagement?",
+            "options": ["Lawyer", "Journalist", "Nursery school assistant", "Ballet teacher"],
+            "correct": 2,
+            "explanation": "She worked as an assistant at the Young England Kindergarten in Pimlico, London."
+          },
+          {
+            "q": "Who designed Diana's famous wedding dress?",
+            "options": ["Coco Chanel", "David and Elizabeth Emanuel", "Christian Dior", "Vera Wang"],
+            "correct": 1,
+            "explanation": "British designers David and Elizabeth Emanuel created the dress, which had a 25-foot (about 7.6 m) train."
+          },
+          {
+            "q": "What was the name of Diana's first son?",
+            "options": ["Harry", "George", "William", "Andrew"],
+            "correct": 2,
+            "explanation": "Prince William was born in 1982. Prince Harry followed in 1984."
+          },
+          {
+            "q": "In 1987, Diana helped fight the stigma around which illness by shaking a patient's hand without gloves?",
+            "options": ["HIV/AIDS", "Tuberculosis", "Malaria", "Measles"],
+            "correct": 0,
+            "explanation": "At the time, many people wrongly believed HIV could be spread by touch. Her gesture changed public attitudes."
+          },
+          {
+            "q": "In which year did Diana and Charles divorce?",
+            "options": ["1992", "1994", "1996", "1997"],
+            "correct": 2,
+            "explanation": "They separated in 1992, and the divorce was finalised in August 1996."
+          },
+          {
+            "q": "Which cause did Diana support by walking through a minefield in Angola in 1997?",
+            "options": ["Clean water", "Banning landmines", "Animal rights", "Climate change"],
+            "correct": 1,
+            "explanation": "Her visit with the HALO Trust drew global attention. The Ottawa Treaty banning anti-personnel landmines was signed in December 1997."
+          },
+          {
+            "q": "Which popular nickname is Diana remembered by?",
+            "options": ["The Iron Lady", "The People's Princess", "The Queen of Hearts of Europe", "The Golden Duchess"],
+            "correct": 1,
+            "explanation": "British Prime Minister Tony Blair called her \"the People's Princess\" in a speech in 1997."
+          }
+        ]
+      }
+    }
+  },
+  "oceanGate": {
+    "title": "OceanGate & the Titan",
+    "shortTitle": "OceanGate",
+    "tagline": "Deep-sea exploration and engineering safety",
+    "intro": "In June 2023, the submersible Titan, operated by the company OceanGate, imploded during a dive to the wreck of the Titanic. All five people on board lost their lives. This section looks at the facts and the engineering lessons, with respect for the victims.",
+    "cover": "/images/oceangate/cover.svg",
+    "coverAlt": "Placeholder illustration of the deep ocean with light rays",
+    "games": {
+      "submarine": {
+        "title": "Submarine Adventure",
+        "description": "Guide a small sub down to 20 m without hitting obstacles.",
+        "icon": "anchor",
+        "instructions": [
+          "Steer the submarine down to the target depth of 20 m.",
+          "Use the arrow keys or W A S D. On mobile, use the on-screen buttons.",
+          "Avoid rocks and jellyfish. A collision ends the dive."
+        ],
+        "targetDepth": 20,
+        "maxDescentSpeed": 0.65,
+        "horizontalSpeed": 150,
+        "obstacles": [
+          { "type": "rock", "x": 20, "depth": 2.5, "size": 46 },
+          { "type": "jellyfish", "x": 70, "depth": 4, "size": 34, "moveRange": 22, "speed": 0.8 },
+          { "type": "rock", "x": 50, "depth": 6, "size": 58 },
+          { "type": "rock", "x": 88, "depth": 7.5, "size": 40 },
+          { "type": "jellyfish", "x": 25, "depth": 9, "size": 34, "moveRange": 18, "speed": 1.1 },
+          { "type": "rock", "x": 65, "depth": 10.5, "size": 52 },
+          { "type": "jellyfish", "x": 45, "depth": 12.5, "size": 36, "moveRange": 30, "speed": 0.9 },
+          { "type": "rock", "x": 12, "depth": 14, "size": 50 },
+          { "type": "rock", "x": 80, "depth": 15, "size": 48 },
+          { "type": "jellyfish", "x": 55, "depth": 16.8, "size": 34, "moveRange": 25, "speed": 1.3 },
+          { "type": "rock", "x": 30, "depth": 18.4, "size": 44 }
+        ]
+      },
+      "timeline": {
+        "title": "Timeline Challenge",
+        "description": "Order the documented events of OceanGate and the Titan.",
+        "icon": "clock",
+        "instructions": [
+          "You will see six documented events in random order.",
+          "Drag and drop the cards, or use the arrow buttons on mobile.",
+          "Press Check to see your score and read a short explanation of each event."
+        ],
+        "events": [
+          {
+            "id": "o1",
+            "label": "OceanGate is founded in the United States by Stockton Rush and Guillermo Söhnlein.",
+            "year": "2009",
+            "explanation": "The private company, based in Everett, Washington, planned to take paying customers on deep-sea expeditions."
+          },
+          {
+            "id": "o2",
+            "label": "Industry experts and a company employee raise safety concerns about Titan's design and testing.",
+            "year": "2018",
+            "explanation": "A former director of marine operations wrote a critical report, and more than 30 experts from the Marine Technology Society signed a letter warning about the experimental approach."
+          },
+          {
+            "id": "o3",
+            "label": "Titan makes its first crewed expeditions to the wreck of the Titanic.",
+            "year": "2021",
+            "explanation": "The Titanic lies about 3,800 m (12,500 ft) deep in the North Atlantic, about 600 km south of Newfoundland, Canada."
+          },
+          {
+            "id": "o4",
+            "label": "Titan starts a dive to the Titanic with five people on board and loses contact with its support ship.",
+            "year": "18 June 2023",
+            "explanation": "Communication was lost about 1 hour and 45 minutes into the descent, starting a large international search."
+          },
+          {
+            "id": "o5",
+            "label": "The US Coast Guard announces that debris from Titan was found near the Titanic.",
+            "year": "22 June 2023",
+            "explanation": "The debris was consistent with a catastrophic implosion of the pressure hull. All five people on board died."
+          },
+          {
+            "id": "o6",
+            "label": "The US Coast Guard investigation board holds public hearings and later publishes its final report.",
+            "year": "2024 – 2025",
+            "explanation": "The Marine Board of Investigation held hearings in September 2024. Its 2025 report concluded the tragedy was preventable and pointed to problems in design, testing and safety culture."
+          }
+        ]
+      },
+      "detective": {
+        "title": "Engineering Investigation",
+        "description": "Act as a safety inspector: which cases are real red flags?",
+        "icon": "shield",
+        "instructions": [
+          "Read six short cases about engineering, safety and risk management.",
+          "Some are documented facts about Titan, others are clearly labeled fictional scenarios.",
+          "Select every case you think is a real red flag, then press Check."
+        ],
+        "cases": [
+          {
+            "id": "c1",
+            "tag": "Documented fact",
+            "text": "The submersible was never certified (\"classed\") by an independent organization such as DNV or ABS.",
+            "isRedFlag": true,
+            "explanation": "Independent classification means outside experts review the design, materials and tests. Skipping it removes an important safety check."
+          },
+          {
+            "id": "c2",
+            "tag": "Documented fact",
+            "text": "The main pressure hull was made of carbon fiber composite, a material with little track record for repeated deep dives.",
+            "isRedFlag": true,
+            "explanation": "Carbon fiber is very strong, but under repeated extreme compression, hidden damage can build up. Using it without extensive testing was a serious risk."
+          },
+          {
+            "id": "c3",
+            "tag": "Documented fact",
+            "text": "In 2018, the company's director of marine operations wrote a report with safety concerns about hull testing and was later dismissed.",
+            "isRedFlag": true,
+            "explanation": "When an expert inside the company warns about safety, the concerns should be investigated, not ignored. A healthy safety culture listens to warnings."
+          },
+          {
+            "id": "c4",
+            "tag": "Documented fact",
+            "text": "An acoustic monitoring system was installed to listen for cracking sounds in the hull during dives.",
+            "isRedFlag": false,
+            "explanation": "Monitoring by itself is a reasonable extra safety measure. The problem appears only if it is used instead of proper testing, because it may give very little warning time."
+          },
+          {
+            "id": "c5",
+            "tag": "Fictional scenario",
+            "text": "A dive team completes a full pre-dive checklist and cancels the dive because the weather is worse than the safety limit.",
+            "isRedFlag": false,
+            "explanation": "This is good practice. Clear limits and the willingness to cancel are signs of a strong safety culture."
+          },
+          {
+            "id": "c6",
+            "tag": "Fictional scenario",
+            "text": "A company tests a full-scale model of its hull to destruction in a pressure chamber to confirm a large safety margin before carrying passengers.",
+            "isRedFlag": false,
+            "explanation": "Testing beyond the operating depth with a safety margin is exactly what engineers should do before putting people inside."
+          }
+        ]
+      }
+    }
+  }
+}
+
