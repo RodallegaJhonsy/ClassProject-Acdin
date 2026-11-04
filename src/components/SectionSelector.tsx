@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Crown, Anchor } from "lucide-react";
+import { Crown, Anchor, Ghost } from "lucide-react";
 import type { SectionKey } from "@/types/games";
 
 interface Props {
@@ -44,10 +44,13 @@ export default function SectionSelector({ label, sections }: Props) {
         </span>
         {sections.map((s) => {
           const isDiana = s.key === "princessDiana";
+          const isHalloween = s.key === "halloween";
           const isActive = current === s.key;
-          const Icon = isDiana ? Crown : Anchor;
+          const Icon = isDiana ? Crown : isHalloween ? Ghost : Anchor;
           const activeCls = isDiana
             ? "bg-royal-900 text-beige-50 border-royal-900"
+            : isHalloween
+            ? "bg-spooky-950 text-orange-400 border-orange-500 shadow-sm shadow-orange-950/40"
             : "bg-abyss-900 text-cyan-200 border-abyss-900";
           return (
             <button

@@ -10,6 +10,9 @@ import DifferencesGame from "@/components/games/DifferencesGame";
 import QuizGame from "@/components/games/QuizGame";
 import SubmarineGame from "@/components/games/SubmarineGame";
 import DetectiveGame from "@/components/games/DetectiveGame";
+import CatchCandiesGame from "@/components/games/CatchCandiesGame";
+import TerrifyingMemoryGame from "@/components/games/TerrifyingMemoryGame";
+import SurviveNightGame from "@/components/games/SurviveNightGame";
 
 interface Props {
   active: ActiveGame;
@@ -18,9 +21,13 @@ interface Props {
 }
 
 function getMeta(active: ActiveGame): GameMeta {
-  return active.section === "princessDiana"
-    ? data.princessDiana.games[active.game]
-    : data.oceanGate.games[active.game];
+  if (active.section === "princessDiana") {
+    return data.princessDiana.games[active.game];
+  }
+  if (active.section === "oceanGate") {
+    return data.oceanGate.games[active.game];
+  }
+  return data.halloween.games[active.game];
 }
 
 export default function GameModal({ active, onClose, onFinish }: Props) {
@@ -57,14 +64,25 @@ export default function GameModal({ active, onClose, onFinish }: Props) {
           return <QuizGame data={games.quiz} {...props} />;
       }
     }
-    const games = data.oceanGate.games;
+    if (active.section === "oceanGate") {
+      const games = data.oceanGate.games;
+      switch (active.game) {
+        case "submarine":
+          return <SubmarineGame data={games.submarine} {...props} />;
+        case "timeline":
+          return <TimelineGame data={games.timeline} {...props} />;
+        case "detective":
+          return <DetectiveGame data={games.detective} {...props} />;
+      }
+    }
+    const games = data.halloween.games;
     switch (active.game) {
-      case "submarine":
-        return <SubmarineGame data={games.submarine} {...props} />;
-      case "timeline":
-        return <TimelineGame data={games.timeline} {...props} />;
-      case "detective":
-        return <DetectiveGame data={games.detective} {...props} />;
+      case "catchCandies":
+        return <CatchCandiesGame data={games.catchCandies} {...props} />;
+      case "memory":
+        return <TerrifyingMemoryGame data={games.memory} {...props} />;
+      case "surviveNight":
+        return <SurviveNightGame data={games.surviveNight} {...props} />;
     }
   };
 

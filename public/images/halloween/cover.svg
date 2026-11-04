@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="nightSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0612" />
+      <stop offset="50%" stop-color="#1b0c33" />
+      <stop offset="100%" stop-color="#2a0845" />
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffedd5" stop-opacity="1" />
+      <stop offset="60%" stop-color="#fdba74" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ea580c" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="pumpkinGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff8c00" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#nightSky)" />
+
+  <!-- Stars -->
+  <circle cx="45" cy="40" r="1.5" fill="#fef08a" opacity="0.8" />
+  <circle cx="85" cy="70" r="1.2" fill="#fef08a" opacity="0.6" />
+  <circle cx="150" cy="30" r="2" fill="#fef08a" opacity="0.9" />
+  <circle cx="320" cy="50" r="1.5" fill="#fef08a" opacity="0.7" />
+  <circle cx="370" cy="85" r="1.8" fill="#fef08a" opacity="0.8" />
+  <circle cx="280" cy="25" r="1.2" fill="#fef08a" opacity="0.5" />
+
+  <!-- Moon with glow -->
+  <circle cx="300" cy="90" r="65" fill="url(#moonGlow)" />
+  <circle cx="300" cy="90" r="42" fill="#ffedd5" />
+  <circle cx="285" cy="82" r="8" fill="#fed7aa" opacity="0.5" />
+  <circle cx="315" cy="100" r="12" fill="#fed7aa" opacity="0.4" />
+
+  <!-- Distant haunted hills -->
+  <path d="M0 260 Q80 210 180 250 T360 230 Q390 235 400 240 L400 300 L0 300 Z" fill="#130924" />
+  <path d="M0 275 Q120 250 240 270 T400 260 L400 300 L0 300 Z" fill="#07030d" />
+
+  <!-- Spooky bare tree silhouette -->
+  <path d="M40 280 L48 210 Q45 190 35 180 Q50 185 52 195 L55 170 Q45 150 30 145 Q50 155 58 175 Q65 160 80 150 Q70 165 62 185 L65 210 L78 280 Z" fill="#07030d" />
+  <path d="M52 195 Q70 190 85 195 Q72 200 60 205 Z" fill="#07030d" />
+
+  <!-- Flying bats -->
+  <path d="M110 90 Q120 80 130 90 Q125 95 120 92 Q115 95 110 90 Z" fill="#1e112a" />
+  <path d="M140 70 Q148 62 156 70 Q152 74 148 72 Q144 74 140 70 Z" fill="#1e112a" />
+  <path d="M220 115 Q232 103 244 115 Q238 120 232 118 Q226 120 220 115 Z" fill="#0a0512" />
+
+  <!-- Central Jack-o'-Lantern Pumpkin -->
+  <g transform="translate(200, 235)">
+    <!-- Stem -->
+    <path d="M-6 -45 Q-2 -58 12 -55 Q8 -48 2 -43 Z" fill="#4d7c0f" />
+    
+    <!-- Pumpkin lobes -->
+    <ellipse cx="0" cy="0" rx="55" ry="42" fill="url(#pumpkinGrad)" stroke="#7c2d12" stroke-width="2" />
+    <ellipse cx="-24" cy="0" rx="28" ry="40" fill="url(#pumpkinGrad)" stroke="#7c2d12" stroke-width="1.5" />
+    <ellipse cx="24" cy="0" rx="28" ry="40" fill="url(#pumpkinGrad)" stroke="#7c2d12" stroke-width="1.5" />
+    <ellipse cx="0" cy="0" rx="20" ry="41" fill="url(#pumpkinGrad)" stroke="#7c2d12" stroke-width="1.5" />
+
+    <!-- Glowing eyes -->
+    <polygon points="-26,-12 -12,-8 -20,-22" fill="#fef08a" stroke="#ca8a04" stroke-width="1" />
+    <polygon points="26,-12 12,-8 20,-22" fill="#fef08a" stroke="#ca8a04" stroke-width="1" />
+
+    <!-- Glowing nose -->
+    <polygon points="0,-6 -7,6 7,6" fill="#fef08a" stroke="#ca8a04" stroke-width="1" />
+
+    <!-- Carved smiling mouth -->
+    <path d="M-32 14 Q-22 30 0 30 Q22 30 32 14 Q22 22 16 18 L14 24 L6 18 L0 24 L-6 18 L-14 24 L-16 18 Q-24 22 -32 14 Z" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5" />
+  </g>
+
+  <!-- Ground fog mist -->
+  <ellipse cx="140" cy="285" rx="90" ry="12" fill="#a855f7" opacity="0.18" />
+  <ellipse cx="280" cy="290" rx="110" ry="14" fill="#ff7a00" opacity="0.12" />
+  <ellipse cx="200" cy="295" rx="160" ry="10" fill="#a3e635" opacity="0.1" />
+</svg>
+

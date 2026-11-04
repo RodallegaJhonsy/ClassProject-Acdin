@@ -72,6 +72,40 @@
       "youWereWrong": "Your answer was wrong",
       "youFlagged": "You flagged this",
       "youDidNotFlag": "You did not flag this"
+    },
+    "halloween": {
+      "candies": "Candies",
+      "lives": "Lives",
+      "bonusMode": "Hard Bonus Mode",
+      "bonusTime": "Bonus Time",
+      "targetReached": "Target Reached! 20 Candies!",
+      "targetReachedText": "Spooky skills! You caught {count} candies with a final score of {score}.",
+      "bonusCompletedText": "Hard Bonus Mode Complete! Total candies caught: {count} (Score: {score}).",
+      "candyDefeat": "Out of Lives!",
+      "candyDefeatText": "A dangerous bad object hit your basket! You caught {count} candies (Score: {score}).",
+      "left": "Left",
+      "right": "Right",
+      "memoryMoves": "Moves",
+      "memoryFlips": "Flips",
+      "memoryTime": "Time",
+      "memoryPairs": "Pairs",
+      "memoryWon": "All Spooky Pairs Found!",
+      "memoryWonText": "You conquered the haunted memory with {time}s left using {flips} flips (Score: {score}).",
+      "memoryTimeDefeat": "Time's Up!",
+      "memoryTimeDefeatText": "Dawn broke before you could find all pairs. Spooky creatures vanished!",
+      "memoryTimeAlmostText": "Almost there! You discovered {pairs} of 8 pairs before time ran out. Play again to finish!",
+      "memoryFlipsDefeat": "Out of Flips!",
+      "memoryFlipsDefeatText": "You reached the maximum limit of {maxFlips} flips. Try to memorize better!",
+      "surviveDistance": "Distance",
+      "surviveLives": "Lives",
+      "surviveChase": "Chaser Active!",
+      "surviveCrashed": "Spooked!",
+      "surviveCrashedText": "You ran out of lives! The creatures of the night caught you. Try again!",
+      "surviveWon": "You Survived the Night!",
+      "surviveWonText": "You conquered the 25m haunted run in {time}s with {lives} lives remaining (Score: {score})!",
+      "up": "Up",
+      "down": "Down",
+      "disclaimer": "Fictional educational Halloween game, safe and friendly for all ages."
     }
   },
   "princessDiana": {
@@ -359,6 +393,94 @@
             "isRedFlag": false,
             "explanation": "Testing beyond the operating depth with a safety margin is exactly what engineers should do before putting people inside."
           }
+        ]
+      }
+    }
+  },
+  "halloween": {
+    "title": "October 31 — Halloween",
+    "shortTitle": "Halloween",
+    "tagline": "Spooky Night & Haunted Games",
+    "intro": "Celebrate October 31 with three spooky challenges! Test your candy-catching reflexes, uncover haunted memory pairs, and survive a misty night avoiding eerie creatures.",
+    "cover": "/images/halloween/cover.svg",
+    "coverAlt": "Halloween illustration of a carved glowing pumpkin and bats under a full moon",
+    "games": {
+      "catchCandies": {
+        "title": "Catch the Candies",
+        "description": "Control a spooky pumpkin basket and catch falling sweets before they hit the ground.",
+        "icon": "candy",
+        "instructions": [
+          "Catch 20 candies to win. Avoid bad items (💀, 💣, 🕷️) — they cost 1 life!",
+          "Your basket shrinks as you catch sweets. Speed scales up smoothly.",
+          "Use Left/Right arrow keys, A/D, touch the on-screen buttons, or drag your basket.",
+          "Reaching 20 candies wins the game! You can then play an optional Hard Bonus Mode."
+        ],
+        "targetCandies": 20,
+        "lives": 3,
+        "hardModeSeconds": 20,
+        "candyTypes": ["🍬", "🍭", "🍫", "🍪", "🧁"],
+        "badTypes": ["💀", "💣", "🕷️"],
+        "badSpawnChance": 0.15,
+        "badSpawnChanceHard": 0.25,
+        "basket": {
+          "widthPx": 88,
+          "minWidthPx": 68,
+          "shrinkEvery": 12
+        },
+        "spawnConfig": {
+          "initialIntervalMs": 750,
+          "minIntervalMs": 300,
+          "initialSpeed": 2.5,
+          "maxSpeed": 5.0
+        }
+      },
+      "memory": {
+        "title": "Terrifying Memory",
+        "description": "Match all 8 pairs of haunted Halloween symbols before dawn breaks.",
+        "icon": "ghost",
+        "instructions": [
+          "Click or tap any card to reveal its spooky Halloween character.",
+          "4x4 grid = 8 pairs. You have 120 seconds and a maximum of 60 flips!",
+          "Complete all 8 pairs to win!"
+        ],
+        "gridCols": 4,
+        "gridRows": 4,
+        "timeLimitSeconds": 120,
+        "maxFlips": 60,
+        "flipBackDelayMs": 650,
+        "pairs": [
+          { "id": "pumpkin", "icon": "🎃", "label": "Pumpkin" },
+          { "id": "bat", "icon": "🦇", "label": "Bat" },
+          { "id": "spider", "icon": "🕷️", "label": "Spider" },
+          { "id": "vampire", "icon": "🧛", "label": "Vampire" },
+          { "id": "witch", "icon": "🧙", "label": "Witch" },
+          { "id": "ghost", "icon": "👻", "label": "Ghost" },
+          { "id": "skull", "icon": "💀", "label": "Skull" },
+          { "id": "candy", "icon": "🍬", "label": "Candy" }
+        ]
+      },
+      "surviveNight": {
+        "title": "Survive the Night",
+        "description": "Navigate a misty graveyard path and travel 25 meters while dodging spooky hazards.",
+        "icon": "skull",
+        "instructions": [
+          "Travel forward through the haunted mist to reach the 25-meter safety haven.",
+          "You start with 3 lives. Collisions grant 1000ms invulnerability.",
+          "At 20m, a final chaser pursues you! The walls narrow every 15m.",
+          "Steer with arrow keys, WASD, or on-screen directional buttons."
+        ],
+        "targetDistance": 25,
+        "lives": 3,
+        "playerSpeed": 3.5,
+        "chaseAfterMeters": 20,
+        "pathNarrowEvery": 15,
+        "pathNarrowPercent": 0.15,
+        "minPathWidthPercent": 0.55,
+        "obstacles": [
+          { "id": "bat", "icon": "🦇", "speed": 1.8, "size": 28, "pattern": "sine" },
+          { "id": "pumpkin", "icon": "🎃", "speed": 2.0, "size": 32, "pattern": "straight" },
+          { "id": "ghost", "icon": "👻", "speed": 1.6, "size": 30, "pattern": "zigzag" },
+          { "id": "specter", "icon": "👤", "speed": 2.5, "size": 32, "pattern": "homing" }
         ]
       }
     }

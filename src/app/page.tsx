@@ -48,6 +48,12 @@ const oceanCards: CardDef[] = [
   { active: { section: "oceanGate", game: "detective" }, meta: data.oceanGate.games.detective },
 ];
 
+const halloweenCards: CardDef[] = [
+  { active: { section: "halloween", game: "catchCandies" }, meta: data.halloween.games.catchCandies },
+  { active: { section: "halloween", game: "memory" }, meta: data.halloween.games.memory },
+  { active: { section: "halloween", game: "surviveNight" }, meta: data.halloween.games.surviveNight },
+];
+
 export default function Home() {
   const [active, setActive] = useState<ActiveGame | null>(null);
   const [progress, setProgress] = useState<Progress>({});
@@ -83,39 +89,57 @@ export default function Home() {
   const renderSection = (key: SectionKey, cards: CardDef[]) => {
     const section = data[key];
     const isDiana = key === "princessDiana";
+    const isHalloween = key === "halloween";
+
+    const sectionWrapperClass = isDiana
+      ? "scroll-mt-20 bg-gradient-to-b from-beige-50 to-beige-100 py-14 sm:py-20"
+      : isHalloween
+      ? "scroll-mt-20 bg-gradient-to-b from-spooky-900 via-spooky-950 to-black py-14 text-orange-50 sm:py-20"
+      : "scroll-mt-20 bg-gradient-to-b from-abyss-800 via-abyss-900 to-abyss-950 py-14 text-slate-100 sm:py-20";
+
+    const taglineClass = isDiana
+      ? "text-xs font-semibold uppercase tracking-[0.25em] text-gold-500"
+      : isHalloween
+      ? "text-xs font-semibold uppercase tracking-[0.25em] text-orange-400"
+      : "text-xs font-semibold uppercase tracking-[0.25em] text-cyan-300";
+
+    const titleClass = isDiana
+      ? "mt-3 font-serif text-3xl text-royal-950 sm:text-4xl"
+      : isHalloween
+      ? "mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl"
+      : "mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl";
+
+    const introClass = isDiana
+      ? "mt-4 max-w-2xl text-royal-800/80"
+      : isHalloween
+      ? "mt-4 max-w-2xl text-purple-200/80"
+      : "mt-4 max-w-2xl text-cyan-50/75";
+
+    const coverClass = isDiana
+      ? "hidden aspect-[4/3] w-full rounded-2xl border border-gold-300/60 object-cover shadow-lg md:block"
+      : isHalloween
+      ? "hidden aspect-[4/3] w-full rounded-2xl border border-orange-500/40 object-cover shadow-lg shadow-purple-950/60 md:block"
+      : "hidden aspect-[4/3] w-full rounded-2xl border border-cyan-400/30 object-cover shadow-lg shadow-cyan-900/40 md:block";
+
     return (
       <section
         id={key}
         aria-labelledby={`${key}-title`}
-        className={
-          isDiana
-            ? "scroll-mt-20 bg-gradient-to-b from-beige-50 to-beige-100 py-14 sm:py-20"
-            : "scroll-mt-20 bg-gradient-to-b from-abyss-800 via-abyss-900 to-abyss-950 py-14 text-slate-100 sm:py-20"
-        }
+        className={sectionWrapperClass}
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="grid items-center gap-8 md:grid-cols-[1.4fr_1fr]">
             <div>
-              <p
-                className={
-                  isDiana
-                    ? "text-xs font-semibold uppercase tracking-[0.25em] text-gold-500"
-                    : "text-xs font-semibold uppercase tracking-[0.25em] text-cyan-300"
-                }
-              >
+              <p className={taglineClass}>
                 {section.tagline}
               </p>
               <h2
                 id={`${key}-title`}
-                className={
-                  isDiana
-                    ? "mt-3 font-serif text-3xl text-royal-950 sm:text-4xl"
-                    : "mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl"
-                }
+                className={titleClass}
               >
                 {section.title}
               </h2>
-              <p className={isDiana ? "mt-4 max-w-2xl text-royal-800/80" : "mt-4 max-w-2xl text-cyan-50/75"}>
+              <p className={introClass}>
                 {section.intro}
               </p>
             </div>
@@ -123,11 +147,7 @@ export default function Home() {
             <img
               src={section.cover}
               alt={section.coverAlt}
-              className={
-                isDiana
-                  ? "hidden aspect-[4/3] w-full rounded-2xl border border-gold-300/60 object-cover shadow-lg md:block"
-                  : "hidden aspect-[4/3] w-full rounded-2xl border border-cyan-400/30 object-cover shadow-lg shadow-cyan-900/40 md:block"
-              }
+              className={coverClass}
             />
           </div>
 
@@ -157,10 +177,12 @@ export default function Home() {
         sections={[
           { key: "princessDiana", label: data.princessDiana.shortTitle },
           { key: "oceanGate", label: data.oceanGate.shortTitle },
+          { key: "halloween", label: data.halloween.shortTitle },
         ]}
       />
       {renderSection("princessDiana", dianaCards)}
       {renderSection("oceanGate", oceanCards)}
+      {renderSection("halloween", halloweenCards)}
       <footer className="bg-abyss-950 px-4 py-8 text-center text-xs text-cyan-100/60">
         <p className="mx-auto max-w-3xl">{data.site.footer}</p>
       </footer>

@@ -27,6 +27,14 @@ const config: Config = {
           800: "#06223b",
           700: "#0a3557",
         },
+        spooky: {
+          950: "#0a0612",
+          900: "#130924",
+          800: "#22113d",
+          700: "#361b5f",
+          accent: "#ff7a00",
+          lime: "#a3e635",
+        },
       },
       fontFamily: {
         serif: ["Georgia", "Cambria", "Times New Roman", "serif"],

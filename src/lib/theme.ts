@@ -58,6 +58,25 @@ export const themes: Record<SectionKey, Theme> = {
     error: "border-rose-400 bg-rose-950/60 text-rose-100",
     heading: "font-sans tracking-tight",
   },
+  halloween: {
+    key: "halloween",
+    modalBg: "bg-spooky-950",
+    text: "text-orange-50",
+    muted: "text-purple-200/70",
+    card: "bg-spooky-800",
+    cardHover: "hover:bg-spooky-700",
+    border: "border-orange-500/25",
+    primaryBtn:
+      "bg-orange-500 text-stone-950 font-bold hover:bg-orange-400 focus-visible:ring-orange-300 disabled:bg-orange-500/40",
+    secondaryBtn:
+      "border border-orange-500/30 text-orange-200 bg-spooky-800 hover:bg-spooky-700 focus-visible:ring-orange-300",
+    accentText: "text-orange-400",
+    progressTrack: "bg-spooky-800",
+    progressFill: "bg-orange-500",
+    success: "border-lime-400 bg-lime-950/60 text-lime-100",
+    error: "border-rose-400 bg-rose-950/60 text-rose-100",
+    heading: "font-sans font-bold tracking-tight",
+  },
 };
 
 export const btnBase =

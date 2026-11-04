@@ -76,6 +76,40 @@ export interface UiStrings {
     youFlagged: string;
     youDidNotFlag: string;
   };
+  halloween: {
+    candies: string;
+    lives: string;
+    bonusMode: string;
+    bonusTime: string;
+    targetReached: string;
+    targetReachedText: string;
+    bonusCompletedText: string;
+    candyDefeat: string;
+    candyDefeatText: string;
+    left: string;
+    right: string;
+    memoryMoves: string;
+    memoryFlips: string;
+    memoryTime: string;
+    memoryPairs: string;
+    memoryWon: string;
+    memoryWonText: string;
+    memoryTimeDefeat: string;
+    memoryTimeDefeatText: string;
+    memoryTimeAlmostText: string;
+    memoryFlipsDefeat: string;
+    memoryFlipsDefeatText: string;
+    surviveDistance: string;
+    surviveLives: string;
+    surviveChase: string;
+    surviveCrashed: string;
+    surviveCrashedText: string;
+    surviveWon: string;
+    surviveWonText: string;
+    up: string;
+    down: string;
+    disclaimer: string;
+  };
 }
 
 /** Fields shared by every mini-game. */
@@ -167,6 +201,65 @@ export interface DetectiveGameData extends GameMeta {
   cases: DetectiveCase[];
 }
 
+export interface SpawnConfig {
+  initialIntervalMs: number;
+  minIntervalMs: number;
+  initialSpeed: number;
+  maxSpeed: number;
+}
+
+export interface BasketConfig {
+  widthPx: number;
+  minWidthPx: number;
+  shrinkEvery: number;
+}
+
+export interface CatchCandiesGameData extends GameMeta {
+  targetCandies: number;
+  lives: number;
+  hardModeSeconds: number;
+  candyTypes: string[];
+  badTypes: string[];
+  badSpawnChance: number;
+  badSpawnChanceHard: number;
+  basket: BasketConfig;
+  spawnConfig: SpawnConfig;
+}
+
+export interface MemoryPair {
+  id: string;
+  icon: string;
+  label: string;
+}
+
+export interface MemoryGameData extends GameMeta {
+  gridCols: number;
+  gridRows: number;
+  timeLimitSeconds: number;
+  maxFlips: number;
+  flipBackDelayMs: number;
+  pairs: MemoryPair[];
+}
+
+export interface NightObstacle {
+  id: string;
+  icon: string;
+  speed: number;
+  size: number;
+  pattern: string;
+}
+
+export interface SurviveNightGameData extends GameMeta {
+  targetDistance: number;
+  lives: number;
+  playerSpeed: number;
+  chaseAfterMeters: number;
+  pathNarrowEvery: number;
+  pathNarrowPercent: number;
+  minPathWidthPercent: number;
+  obstacles: NightObstacle[];
+}
+
 export interface SectionBase {
   title: string;
   shortTitle: string;
@@ -192,18 +285,28 @@ export interface OceanGateSection extends SectionBase {
   };
 }
 
+export interface HalloweenSection extends SectionBase {
+  games: {
+    catchCandies: CatchCandiesGameData;
+    memory: MemoryGameData;
+    surviveNight: SurviveNightGameData;
+  };
+}
+
 export interface GamesData {
   site: SiteData;
   ui: UiStrings;
   princessDiana: DianaSection;
   oceanGate: OceanGateSection;
+  halloween: HalloweenSection;
 }
 
-export type SectionKey = "princessDiana" | "oceanGate";
+export type SectionKey = "princessDiana" | "oceanGate" | "halloween";
 
 export type ActiveGame =
   | { section: "princessDiana"; game: keyof DianaSection["games"] }
-  | { section: "oceanGate"; game: keyof OceanGateSection["games"] };
+  | { section: "oceanGate"; game: keyof OceanGateSection["games"] }
+  | { section: "halloween"; game: keyof HalloweenSection["games"] };
 
 /** Callback every game calls once it reaches its results screen. */
 export type FinishHandler = (score: number, total: number) => void;
